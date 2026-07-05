@@ -74,12 +74,12 @@ jobs:
 
       # Exchanges the GitHub Actions OIDC token for a short-lived NuGet.org API key.
       # Configure a Trusted Publishing policy on nuget.org for this repository/workflow,
-      # and set the repository variable NUGET_USER to your nuget.org account name.
+      # and set the repository secret NUGET_USER to your nuget.org account name.
       - name: NuGet login (trusted publishing)
         id: login
         uses: NuGet/login@v1
         with:
-          user: ${{ vars.NUGET_USER }}
+          user: ${{ secrets.NUGET_USER }}
 
       - name: Push packages
         run: >-
