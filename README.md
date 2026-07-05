@@ -1,23 +1,33 @@
-<p align="left">
-  <img src="https://raw.githubusercontent.com/kearns2000/ClaimsFence/main/assets/icon.png" alt="ClaimsFence" width="140" height="140" />
-</p>
+![ClaimsFence](https://raw.githubusercontent.com/kearns2000/ClaimsFence/main/assets/icon.png)
 
 # ClaimsFence
 
-<p align="center">
-  <a href="https://github.com/kearns2000/ClaimsFence/actions/workflows/ci.yml"><img src="https://github.com/kearns2000/ClaimsFence/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
-  <a href="https://www.nuget.org/packages/ClaimsFence"><img src="https://img.shields.io/nuget/v/ClaimsFence.svg?logo=nuget&label=NuGet" alt="NuGet version" /></a>
-  <a href="https://www.nuget.org/packages/ClaimsFence.AspNetCore"><img src="https://img.shields.io/nuget/v/ClaimsFence.AspNetCore.svg?logo=nuget&label=AspNetCore" alt="NuGet AspNetCore version" /></a>
-  <a href="https://www.nuget.org/packages/ClaimsFence"><img src="https://img.shields.io/nuget/dt/ClaimsFence.svg?logo=nuget&label=Downloads" alt="NuGet downloads" /></a>
-  <a href="https://github.com/kearns2000/ClaimsFence/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT" /></a>
-  <img src="https://img.shields.io/badge/.NET-10.0-512BD4?logo=dotnet" alt=".NET 10.0" />
-</p>
+[![NuGet](https://img.shields.io/nuget/v/ClaimsFence?style=flat&logo=nuget)](https://www.nuget.org/packages/ClaimsFence)
+[![AspNetCore](https://img.shields.io/nuget/v/ClaimsFence.AspNetCore?style=flat&logo=nuget&label=AspNetCore)](https://www.nuget.org/packages/ClaimsFence.AspNetCore)
+[![.NET](https://img.shields.io/badge/.NET-10.0-512BD4?style=flat&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/download/dotnet/10.0)
+[![Build](https://github.com/kearns2000/ClaimsFence/actions/workflows/ci.yml/badge.svg)](https://github.com/kearns2000/ClaimsFence/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/github/license/kearns2000/ClaimsFence)](LICENSE)
+[![Tests](https://img.shields.io/badge/tests-xUnit-5C2D91?style=flat&logo=xunit)](tests/ClaimsFence.Tests)
 
-Lightweight, testable claims authorisation rules for .NET.
+**Target framework:** `net10.0` · **Language:** C# · **Test runner:** xUnit
+
+**Lightweight, testable claims authorisation rules for .NET.**
 
 ClaimsFence is a small rule builder and evaluator for claims-based authorisation. Think
 FluentValidation, but for claims. It lets you express "who is allowed to do this" as a
 reusable, testable object, and it tells you *exactly* why a check failed.
+
+This is not a replacement for ASP.NET Core authorisation. It plugs into it.
+
+## Supported packages
+
+| Package | Purpose |
+|---------|---------|
+| `ClaimsFence` | Core rule builder and evaluator (no ASP.NET Core dependency) |
+| `ClaimsFence.AspNetCore` | Policy and Minimal API integration |
+
+Claim and role value matching is **case-sensitive** (ordinal comparison). Role checks use
+`ClaimsPrincipal.IsInRole`, which follows your identity configuration.
 
 ## What it is
 
@@ -57,27 +67,15 @@ ClaimsFence gives you three things:
 - **Clear diagnostics** - every failure has a code, a message, and the requirement that
   produced it, so you can see precisely why a check failed.
 
-It is **not** a replacement for ASP.NET Core authorisation. It plugs into it.
-
 ## Installation
-
-The core package has no ASP.NET Core dependency and can be used in background workers,
-console apps, and tests:
 
 ```bash
 dotnet add package ClaimsFence
-```
-
-For ASP.NET Core policy and Minimal API integration, also install:
-
-```bash
 dotnet add package ClaimsFence.AspNetCore
 ```
 
-Both packages target `net10.0`.
-
-Claim and role value matching is **case-sensitive** (ordinal comparison). Role checks use
-`ClaimsPrincipal.IsInRole`, which follows your identity configuration.
+The core package works on its own in background workers, console apps, and tests. Install
+`ClaimsFence.AspNetCore` when you need policy or Minimal API integration.
 
 ## Basic usage
 
@@ -272,4 +270,4 @@ development-only header-based authentication scheme.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT
