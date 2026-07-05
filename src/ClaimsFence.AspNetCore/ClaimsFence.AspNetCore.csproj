@@ -25,7 +25,7 @@
     <RepositoryUrl>https://github.com/kearns2000/ClaimsFence</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/kearns2000/ClaimsFence</PackageProjectUrl>
-    <PackageTags>claims;authorization;security;aspnetcore;minimalapi;identity;jwt</PackageTags>
+    <PackageTags>claims;authorization;authorisation;security;aspnetcore;aspnet;webapi;minimalapi;minimal-api;identity;jwt;bearer;oauth;oidc;permissions;roles;rbac;abac;access-control;policy;authorization-handler;authorization-policy;IAuthorizationHandler;endpoint-authorization;middleware;fluent;rule-builder;testing;testable;diagnostics;ClaimsPrincipal;System.Security.Claims;tenant;multi-tenant;dotnet;net10;csharp;pksoftlibs;claimsfence;claimsfence-aspnetcore</PackageTags>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
