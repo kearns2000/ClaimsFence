@@ -1,4 +1,4 @@
-<p align="center">
+<p align="left">
   <img src="https://raw.githubusercontent.com/kearns2000/ClaimsFence/main/assets/icon.png" alt="ClaimsFence" width="140" height="140" />
 </p>
 
