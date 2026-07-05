@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/samples/">
+    <Project Path="samples/ClaimsFence.SampleApi/ClaimsFence.SampleApi.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/ClaimsFence/ClaimsFence.csproj" />
+    <Project Path="src/ClaimsFence.AspNetCore/ClaimsFence.AspNetCore.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ClaimsFence.Tests/ClaimsFence.Tests.csproj" />
+  </Folder>
+</Solution>
